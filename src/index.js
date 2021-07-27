@@ -28,6 +28,7 @@ function loadImages(){
 function addImage(image){
     const img = document.createElement('img')
     img.src = image // this makes the source of the image equal to the fetched url (for each)
+    img.classList.add('dog-image')
     const div = document.querySelector('div')
     div.append(img)
 }
@@ -61,7 +62,7 @@ function addBreed(breed){
 
 function addBreedListener(){
     let dropDown = document.querySelector('select')
-    console.log(dropDown);
+    //console.log(dropDown);
     dropDown.addEventListener('change', function(e){
         filterByLetter(e.target.value);
         //console.log(e.target.value)
